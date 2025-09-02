@@ -15,3 +15,19 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercon
 # Run the Clean-Machine.ps1 script to remove unnecessary capabilities of Windows
 .\Clean-Machine.ps1
 ```
+
+For WSL setup, run the following commands in PowerShell:
+
+```powershell
+.\Configure-WSL.ps1
+```
+
+When jump on WSL for the first time, run:
+
+```bash
+# Setups the required capabilities
+~/.setup-machine/setup-machine.sh
+
+# Configure your WSL instance including git with your name and email
+~/.setup-machine/configure-machine.sh -n "Your Name" -e ""
+```
