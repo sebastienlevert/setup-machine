@@ -13,7 +13,12 @@ Import-Module -Name Fonts
 
 Get-ChildItem -Path CascadiaCode -Recurse | Install-Font
 
-oh-my-posh init pwsh --config OhMyPosh/config.omp.json | Invoke-Expression
+# Creates the .oh-my-posh folder in the user's profile folder
+New-Item -Path ~ -Name '.oh-my-posh' -ItemType Directory -Force
+
+cp .\OhMyPosh\*.* ~\.oh-my-posh -Recurse -Force
+
+oh-my-posh init pwsh --config ~/.oh-my-posh/config.omp.json | Invoke-Expression
 
 cp Microsoft.PowerShell_profile.ps1 $PROFILE
 

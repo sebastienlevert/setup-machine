@@ -5,4 +5,4 @@ if ($PSStyle) {
   $PSStyle.Formatting.FormatAccent = ""
 }
 
-oh-my-posh --init --shell pwsh --config https://raw.githubusercontent.com/sebatienlevert/setup-machine/OhMyPosh/config.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config ~/.oh-my-posh/config.omp.json | Invoke-Expression
