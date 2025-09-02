@@ -8,6 +8,16 @@ Param(
     [switch]$WSL = $true
 )
 
+# Ensure script is running as Administrator
+If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))
+{
+    Write-Warning "You do not have Administrator rights to run this script! Please re-run this script as an Administrator!"
+    Break
+}
+
+# Set PSGallery as a trusted repository
+Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+
 # Update WinGet sources
 Add-AppxPackage -Path https://cdn.winget.microsoft.com/cache/source.msix
 
