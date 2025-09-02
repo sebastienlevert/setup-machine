@@ -1,0 +1,22 @@
+& ([scriptblock]::Create((irm "https://win11debloat.raphi.re/"))) `
+    -RemoveApps `
+    -RemoveCommApps `
+    -RemoveGamingApps `
+    -DisableDVR `
+    -ClearStart `
+    -DisableBing `
+    -DisableSuggestions `
+    -DisableLockscreenTips `
+    -ShowHiddenFolders `
+    -ShowKnownFileExt `
+    -HideSearchTb `
+    -HideDupliDrive `
+    -HideTaskview `
+    -DisableWidgets	`
+    -HideHome `
+    -HideGallery `
+    -Hide3dObjects `
+    -HideMusic `
+    -HideIncludeInLibrary `
+    -HideGiveAccessTo `
+    -Silent
