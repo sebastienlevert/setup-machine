@@ -18,9 +18,6 @@ If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 # Set PSGallery as a trusted repository
 Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
 
-# Update WinGet sources
-Add-AppxPackage -Path https://cdn.winget.microsoft.com/cache/source.msix
-
 if($CLI) {
     winget install Microsoft.PowerToys -h
     winget install Microsoft.WindowsTerminal -h
