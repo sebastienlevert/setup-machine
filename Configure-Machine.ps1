@@ -20,7 +20,7 @@ cp .\OhMyPosh\*.* ~\.oh-my-posh -Recurse -Force
 
 oh-my-posh init pwsh --config ~/.oh-my-posh/config.omp.json | Invoke-Expression
 
-cp Microsoft.PowerShell_profile.ps1 $PROFILE
+cp .\PowerShell\Microsoft.PowerShell_profile.ps1 $PROFILE
 
 git config --global user.name $Name
 git config --global user.email $Email
